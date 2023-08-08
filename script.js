@@ -2,21 +2,25 @@
 var generateBtn = document.querySelector("#generate");
 
 // My portion (everything between lines 4-26 is me)
-var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numbers = "0123456789";
-var characters = "~!@#$%^&*()_-+/?><";
+// var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var lowerCase = ["a", "b", "c", "d", "e"]
+// var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var upperCase = ["A", "B", "C"]
+// var numbers = "0123456789";
+var numbers = ["0", "1", "2"];
+// var characters = "~!@#$%^&*()_-+/?><";
+var characters = ["~", "!", "@"]
 
 function generatePassword() {
 
   //write prompts for user to select what they want in password, need at least 1, yields a boolean true/false
   let answer1 = prompt("Choose a password length between 8 and 128 characters.");
   console.log(answer1);
-  console.log(isNaN(answer1))
-  if (isNaN(answer1)) {
-    alert("Please pick a number instead")
-    return "Try again";
-  }
+  // console.log(isNaN(answer1))
+  // if (isNaN(answer1)) {
+  //   alert("Please pick a number instead")
+  //   return "Try again";
+  // }
   if (answer1 < 8 || answer1 > 128) {
     alert("number is less than 8, or greater than 128")
     return "Try again";
@@ -27,7 +31,7 @@ function generatePassword() {
   let answer5 = confirm("Should I use include numbers?");
   
   //credit to Juan D. for "listOfChoices" code guidance
-  let listOfChoices = " ";
+  let listOfChoices = [];
   if (answer2) {
     listOfChoices += lowerCase;
   }
@@ -42,15 +46,19 @@ function generatePassword() {
   }
 
   console.log(listOfChoices)
+  
 
   //look up math.Random
+  let result = []
+  for (let i = 0; i < answer1; i++) {
+    // var random = Math.floor(Math.random() * listOfChoices.answer1);
+  }
+  console.log(result);
+  console.log(typeof result);
+  // return result;
+ 
+  
 
-  //password gen, need to somehow incorporate the boolean from the confirms/prompt. Run a conditional statement?
-  // let genPassword = " ";
-  // answer1 = //length
-  //write a for loop using answer4 length to add onto "blank" password
-
-  //return genPassword;
 }
 
 
