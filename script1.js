@@ -36,7 +36,7 @@ function generatePassword() {
   //credit to stack overview for help with for loop syntax structure: https://stackoverflow.com/questions/43267033/understanding-the-use-of-math-floor-when-randomly-accessing-an-array
   var finalPassword = "";
   for (let i = 0; i < passwordLength; i++) {
-    finalPassword += passwordArray[Math.floor(Math.random() * (passwordArray.length))];
+    finalPassword += passwordArray[Math.floor(Math.random() * passwordArray.length)];
   }
 
 
