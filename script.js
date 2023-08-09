@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // My portion (everything between lines 4-26 is me)
 // var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var lowerCase = ["a", "b", "c", "d", "e"]
+var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
 // var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var upperCase = ["A", "B", "C"]
 // var numbers = "0123456789";
@@ -16,6 +16,11 @@ function generatePassword() {
   //write prompts for user to select what they want in password, need at least 1, yields a boolean true/false
   let answer1 = prompt("Choose a password length between 8 and 128 characters.");
   console.log(answer1);
+  console.log(typeof answer1);
+  var passwordLength = Number(answer1);
+  console.log(typeof passwordLength);
+ // https://stackoverflow.com/questions/1133770/how-to-convert-a-string-to-an-integer-in-javascript
+
   // console.log(isNaN(answer1))
   // if (isNaN(answer1)) {
   //   alert("Please pick a number instead")
@@ -30,31 +35,26 @@ function generatePassword() {
   let answer4 = confirm("Should I include special characters?");
   let answer5 = confirm("Should I use include numbers?");
   
-  //credit to Juan D. for "listOfChoices" code guidance
-  let listOfChoices = [];
-  if (answer2) {
-    listOfChoices += lowerCase;
-  }
-  if (answer3) {
-    listOfChoices += upperCase;
-  }
-  if (answer4) {
-    listOfChoices += characters;
-  }
-  if (answer5) {
-    listOfChoices += numbers;
-  }
-
-  console.log(listOfChoices)
-  
-
-  //look up math.Random
-  let result = []
-  for (let i = 0; i < answer1; i++) {
-    // var random = Math.floor(Math.random() * listOfChoices.answer1);
+ 
+function forLoop1() {
+  if (answer2);
+  for (let i = 0; i < lowerCase.length; i++) {
+    // random = [];
+    var result = Math.floor(Math.random() * lowerCase);
   }
   console.log(result);
   console.log(typeof result);
+  return result;
+}
+  
+forLoop1();
+
+  // //look up math.Random
+  // for (let i = 0; i < answer1; i++) {
+  //   var result = Math.floor(Math.random() * listOfChoices.answer1);
+  // }
+  // console.log(result);
+  // console.log(typeof result);
   // return result;
  
   
