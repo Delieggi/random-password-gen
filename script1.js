@@ -31,19 +31,20 @@ function generatePassword() {
   let answer5 = confirm("Should I use numbers?");
  
   //concat method found on https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
-  if (answer2) {
+  if (answer2 === true) {
     passwordArray = passwordArray.concat(lowerCase);
     console.log(passwordArray);
   }
-  if (answer3) {
+  if (answer3 === true) {
     passwordArray = passwordArray.concat(upperCase);
     console.log(passwordArray);
-  }
-  if (answer4) {
+  } 
+
+  if (answer4 === true) {
     passwordArray = passwordArray.concat(special);
     console.log(passwordArray);
   }
-  if (answer5) {
+  if (answer5 === true) {
     passwordArray = passwordArray.concat(numbers);
     console.log(passwordArray);
   }
