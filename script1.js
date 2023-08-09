@@ -1,11 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// My portion (everything between lines 4-40 is me)
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var special = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+"];
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+var special = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+", "?", "/", ">", ".", "<"]; 
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var passwordArray = [];
 
 
@@ -48,24 +47,23 @@ function generatePassword() {
     console.log(passwordArray);
   }
 
-  //credit to stack overview for help with for loop syntax structure: https://stackoverflow.com/questions/43267033/understanding-the-use-of-math-floor-when-randomly-accessing-an-array
+  if (!answer2 && !answer3 && !answer4 && !answer5) {
+    alert("Please select at least one additional criteria.")
+    return "Try again";
+  }
+
+  //credit to stack overview for help with for syntax structure for Math random with an array: https://stackoverflow.com/questions/43267033/understanding-the-use-of-math-floor-when-randomly-accessing-an-array
   //also referenced earlier tutoring session with Juan D., re making an empty string and adding elements to it.
   var finalPassword = "";
   for (let i = 0; i < answer1; i++) {
     finalPassword += passwordArray[Math.floor(Math.random() * passwordArray.length)];
   }
 
-
   console.log(finalPassword);
   console.log(typeof finalPassword);
   return finalPassword;
 
-
 }
-
-
-  
-
 
 // Write password to the #password input
 function writePassword() {
