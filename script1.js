@@ -15,6 +15,7 @@ function generatePassword() {
   console.log(answer1);
   console.log(typeof answer1);
  
+  //guidance received from tutor Juan D., on best practices for writing the conditional statements for answer 1.
   console.log(isNaN(answer1))
   if (isNaN(answer1)) {
     alert("Please pick a number instead")
