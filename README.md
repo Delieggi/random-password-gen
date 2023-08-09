@@ -20,6 +20,9 @@ To use the web app, click "generate password", then answer the questions that ap
 
 ![screen shot of password generate app with a randomly generated password inside](/images/passwordgen.jpg)
 
+Link: https://delieggi.github.io/random-password-gen/
+
+
 ## Credits
 
 I received help from a tutor, Juan Delgado, who helped me write the conditional statements to validate user selections. He also showed me how to create an empty string and then use "+=" to add to it. 
